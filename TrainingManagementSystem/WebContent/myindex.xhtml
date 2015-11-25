@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Login</title>
+	<!-- <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery2.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<link rel="stylesheet" href="jquery-ui.css"></link>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			alert("hjkjdhfkjdsf");
+			 $('#username').focusin(function(){
+				 alert("INDISE ALERT 2");
+                 $('#username').addClass('box');
+                 $('#user').text("Enter User Name");
+
+			});
+			 $('#username').focusout(function(){
+				 alert("INDISE ALERT 2");
+                 $('#username').addClass('box');
+                 $('#user').text("");
+
+			});
+			 
+
+		});
+	</script>
+	
+	
+	<style type="text/css">
+.loginContainer {
+	width: 500px;
+	height: 100px;
+	background: #708090;
+	border: 2px solid blue;
+	display: none;
+}
+
+.box {
+	background: #C0C0C0;
+}
+
+.red {
+	background: red;
+	color: white;
+}
+
+.orange {
+	background: orange;
+	color: white;
+}
+
+.green {
+	background: green;
+	color: white;
+}
+</style>
+
+</h:head>
+<h:body>
+	<center>
+	<div>
+		<h:form>
+			<table>
+				<tr>
+					<td>User Name</td>
+					<td><h:inputText id="username" required="true"
+							validatorMessage="Username should have less than 15 characters.">
+							<f:validateLength maximum="15" minimum="1"></f:validateLength>
+						</h:inputText></td>
+					<td><span id="user"></span> <h:message for="username" style="color:red;"></h:message>
+					</td>
+
+				</tr>
+				<tr>
+					<td colspan="2"><h:message for="username" style="color:red;"></h:message></td>
+				</tr>
+
+				<tr>
+					<td>Password</td>
+					<td><h:inputSecret id="password"></h:inputSecret></td>
+
+				</tr>
+				<tr>
+					<td></td>
+					<td><h:selectBooleanCheckbox id="chkRememberMe" />Remember me</td>
+				</tr>
+				<tr>
+					<td><h:commandButton id="register" value="Register"
+							type="submit" action="registration"></h:commandButton></td>
+					<td align="right"><h:commandButton id="login" value="Login"
+							type="submit"></h:commandButton></td>
+				</tr>
+
+
+
+			</table>
+		</h:form>
+
+
+	</div>
+
+
+	</center>
+</h:body>
+</html>

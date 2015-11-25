@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="homemain.xhtml">
+	
+	<ui:define name="content">
+	    <div class="leftmenu">
+
+			<ui:include src="leftmenu.xhtml"></ui:include>
+			
+		</div>
+
+		<div class="center">
+
+
+			<div class="centertop">
+
+				<div id="tabs">
+					<ul>
+						<li><a href="#tabs-1">DASHBOARD</a></li>
+						<li><a href="#tabs-2">ACTIVITY</a></li>
+
+					</ul>
+					<div id="tabs-1">
+
+						<div align="left">
+							<div
+								style="height: 150px; width: 150px;  float: left; left; margin-left: 50px;">
+								<h3><img  src="images/chart.png" height="150px" width="150px"></img></h3>
+							</div>
+						</div>
+
+						<div align="left">
+							<div
+								style="height: 150px; width: 150px; float: left; margin-left: 50px;">
+								<h3><img  src="images/chart 2.png" height="150px" width="150px"></img></h3>
+							</div>
+						</div>
+
+						<div align="left">
+							<div
+								style="height: 150px; width: 150px; float: left; margin-left: 50px;">
+								<h3><img  src="images/chart.png" height="150px" width="150px"></img></h3>
+							</div>
+						</div>
+						
+						<div align="left">
+							<div
+								style="height: 150px; width: 150px; float: left; margin-left: 50px;">
+								<h3><img  src="images/chart 2.png" height="150px" width="150px"></img></h3>
+							</div>
+						</div>
+						
+						
+
+
+						<div align="left">
+							<div
+								style="height: 190px; width: 120px; background-color: white; margin-left: 10px;"></div>
+						</div>
+
+
+
+
+					</div>
+					<div id="tabs-2">
+						<p>This is Activity</p>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="centermiddle">
+
+				<div class="centermiddleleft">
+
+					<div class="centermiddlelefttop">
+						<h3>&nbsp; &nbsp; &nbsp;HISTORICAL</h3>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img  src="images/graph.png" height="250px" width="400px"></img>
+
+				</div>
+
+
+				<div class="centermiddleright">
+
+					<div class="centermiddlelefttop">
+						<h3>&nbsp; &nbsp; &nbsp;ASSIGNMENT SUBMISSION</h3>
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<div class="centerbottom">
+			
+				<div id="chartContainer" style="height: 180px; width: 800px; margin-left: 30px;"></div>
+			
+			</div>
+
+		</div>
+
+		<div class="rightmenu">
+
+			<div class="righttop">
+				<h3 align="center">ACTION</h3>
+			</div>
+
+			<center>
+			<a href="createcourse.xhtml"><img src="images/course.png" height="50px" width="200px"></img></a>
+			<br />
+			<br />
+			<a href="#"><img src="images/user.png" height="50px" width="200px"></img></a>
+			<br />
+			<br />
+			<a href="#"><img src="images/team.png" height="50px" width="200px"></img></a>
+			</center>
+		</div>
+	</ui:define>
+	</ui:composition>
+</html>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Welcome</title>
+
+	<link rel="stylesheet"
+		href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"></link>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="jquery.canvasjs.min.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css"></link>
+
+
+
+	<script>
+	$(document).ready(function(){
+		$(function() {
+			$("#tabs").tabs();
+		});
+		
+		$(function () {
+
+			//Better to construct options first and then pass it as a parameter
+			var options = {
+				exportEnabled: true,
+		                animationEnabled: true,
+				title: {
+					text: "Exporting Chart as Image"
+				},
+				data: [
+				{
+					type: "splineArea", //change it to line, area, bar, pie, etc
+					dataPoints: [
+						{ y: 10 },
+						{ y: 6 },
+						{ y: 14 },
+						{ y: 12 },
+						{ y: 19 },
+						{ y: 14 },
+						{ y: 26 },
+						{ y: 10 },
+						{ y: 22 }
+					]
+				}
+				]
+			};
+
+			$("#chartContainer").CanvasJSChart(options);
+
+		});
+		
+	});
+		
+	</script>
+
+
+
+	<style>
+.wrapper {
+	height: 900px;
+	width: 1350px;
+	margin-left: 20px;
+	background-color: #A8A8A8;
+}
+
+.header {
+	width: 1350px;
+	height: 100px;
+}
+
+.leftmenu {
+	width: 50px;
+	height: 500px;
+	float: left;
+	margin-top: 10px;
+}
+
+.center {
+	width: 1000px;
+	height: 650px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.rightmenu {
+	width: 270px;
+	height: 300px;
+	float: right;
+	margin-top: 10px;
+	background-color: white;
+}
+
+.righttop {
+	width: 270px;
+	height: 50px;
+	float: right;
+	background-color: #D6D4D4;
+	margin-bottom: 10px;
+}
+
+.centertop {
+	width: 1000px;
+	height: 250px;
+}
+
+.centermiddle {
+	width: 1000px;
+	height: 200px;
+	background-color: #E7E7E7;
+	margin-top: 10px;
+}
+
+.centerbottom {
+	width: 1000px;
+	height: 200px;
+	background-color: white;
+	margin-top: 10px;
+}
+
+.centermiddleleft {
+	width: 490px;
+	height: 200px;
+	background-color: white;
+	float: left;
+}
+
+.centermiddlelefttop {
+	width: 490px;
+	height: 50px;
+	background-color: #D6D4D4;
+	float: left;
+}
+
+.centermiddleright {
+	width: 490px;
+	height: 200px;
+	background-color: white;
+	float: right;
+}
+
+.dashboard1 {
+	width: 120px;
+	height: 150px;
+	background-color: #D6D4D4;
+}
+
+.dashboard2 {
+	width: 120px;
+	height: 150px;
+	background-color: #D6D4D4;
+	float: left;
+	margin-left: 10px;
+}
+
+.dashboard3 {
+	width: 120px;
+	height: 150px;
+	background-color: #D6D4D4;
+}
+
+.dashboard4 {
+	
+}
+</style>
+
+
+</h:head>
+<h:body style="background-color: #A8A8A8;">
+	<div class="wrapper">
+
+		<div class="header">
+			<table width="100%">
+				<tr>
+					<td><img src="images/logo.png" height="100px" width="300px"></img></td>
+					<td align="right"><h3>Welcome: Aditya Moghe</h3></td>
+
+
+				</tr>
+
+			</table>
+
+		</div>
+
+
+		<div class="leftmenu">
+
+			<a href="index.xhtml"><img src="images/1.png" height="50px" width="50px"></img></a>
+			<img src="images/2.png" height="40px" width="50px"></img> 
+			<img src="images/3.png" height="50px" width="50px"></img> 
+			<img src="images/4.png" height="50px" width="50px"></img> 
+			<img src="images/5.png" height="50px" width="50px"></img>
+			<img src="images/6.png" height="50px" width="50px"></img>
+			<img src="images/7.png" height="50px" width="50px"></img>
+		</div>
+
+		<div class="center">
+
+
+			<div class="centertop">
+
+				<div id="tabs">
+					<ul>
+						<li><a href="#tabs-1">DASHBOARD</a></li>
+						<li><a href="#tabs-2">ACTIVITY</a></li>
+
+					</ul>
+					<div id="tabs-1">
+
+						<div align="left">
+							<div
+								style="height: 150px; width: 150px; background-color: #D6D4D4; float: left; left; margin-left: 50px;">
+								<h3>Division 1</h3>
+							</div>
+						</div>
+
+						<div align="left">
+							<div
+								style="height: 150px; width: 150px; background-color: #D6D4D4; float: left; margin-left: 50px;">
+								<h3>Division 2</h3>
+							</div>
+						</div>
+
+						<div align="left">
+							<div
+								style="height: 150px; width: 150px; background-color: #D6D4D4; float: left; margin-left: 50px;">
+								<h3>Division 3</h3>
+							</div>
+						</div>
+
+						<div align="left">
+							<div
+								style="height: 150px; width: 150px; background-color: #D6D4D4; float: left; margin-left: 50px;">
+								<h3>Division 4</h3>
+							</div>
+						</div>
+
+
+
+						<div align="left">
+							<div
+								style="height: 150px; width: 120px; background-color: white; margin-left: 10px;"></div>
+						</div>
+
+
+
+
+					</div>
+					<div id="tabs-2">
+						<p>This is Activity</p>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="centermiddle">
+
+				<div class="centermiddleleft">
+
+					<div class="centermiddlelefttop">
+						<h3>&nbsp; &nbsp; &nbsp;HISTORICAL</h3>
+					</div>
+
+
+				</div>
+
+
+				<div class="centermiddleright">
+
+					<div class="centermiddlelefttop">
+						<h3>&nbsp; &nbsp; &nbsp;ASSIGNMENT SUBMISSION</h3>
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<div class="centerbottom">
+			
+				<div id="chartContainer" style="height: 180px; width: 800px; margin-left: 30px;"></div>
+			
+			</div>
+
+		</div>
+
+		<div class="rightmenu">
+
+			<div class="righttop">
+				<h3 align="center">ACTION</h3>
+			</div>
+
+			<center>
+			<a href="#"><img src="images/course.png" height="50px" width="200px"></img></a>
+			<br />
+			<br />
+			<a href="#"><img src="images/user.png" height="50px" width="200px"></img></a>
+			<br />
+			<br />
+			<a href="#"><img src="images/team.png" height="50px" width="200px"></img></a>
+			</center>
+		</div>
+
+
+	</div>
+
+</h:body>
+</html>

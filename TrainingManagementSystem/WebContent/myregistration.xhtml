@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Registration</title>
+
+	<script src="jquery.js" type="text/javascript"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript" src="javaScript/loginJs.js"></script>
+	<script type="text/javascript" src="javaScript/registrationJs.js"></script>
+	<script src="jquery.cookie.js"></script>
+
+	<link rel="stylesheet" href="jquery-ui.css" />
+	<link rel="stylesheet" href="CSS/loginCss.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
+<script>
+	$(document).ready(function(){
+	    $('#name').focusin(function(){
+	        $('#name').addClass('box');
+	        $('#spanname').text("Enter userName");
+	    });
+	    
+	    $('#name').focusout(function(){
+	        $('#name').removeClass('box');
+	        $('#spanname').text("");
+	    });
+	    
+	    $('#password').focusin(function(){
+	        $('#password').addClass('box');
+	        $('#pass').text("Enter Password");
+	    });
+	    
+	    $('#password').focusout(function(){
+	        $('#password').removeClass('box');
+	        $('#pass').text("");
+	    });
+	    
+	    
+	  });
+	</script>
+
+<style>
+
+.wrapper{
+
+	height: 600px;
+	width: 400px;
+	background-color: plum;
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	background-image: url("box.jpg");
+}
+
+
+.box {
+	background: plum;
+}
+
+.red {
+	background: red;
+	color: white;
+}
+
+.orange {
+	background: orange;
+	color: white;
+}
+
+.green {
+	background: green;
+	color: white;
+}
+
+#show {
+	margin-top: 150px;
+}
+
+
+
+
+</style>
+
+
+</h:head>
+<h:body style="background-image:url(back.jpg);">
+	<div class="wrapper">
+		<h:form>
+			<center>
+
+			<table border="0" width="300px" height="500px">
+
+				<tr>
+					<br />
+					<td colspan="2" height="10%"><h1>Registration</h1></td>
+
+				</tr>
+
+				<tr>
+					<td>Name</td>
+					<td><h:inputText id="name"></h:inputText></td>
+					<td><span id="spanname"></span></td>
+				</tr>
+
+
+
+				<tr>
+					<td>Contact</td>
+					<td><h:inputText id="contact"></h:inputText></td>
+					<td><span id="spancontact"></span></td>
+				</tr>
+
+
+
+				<tr>
+					<td>Email</td>
+					<td><h:inputText id="email"></h:inputText></td>
+				</tr>
+
+
+
+
+
+				<tr>
+					<td>Designation</td>
+					<td><h:selectOneMenu>
+							<f:selectItem itemValue="manager" itemLabel="Manager" />
+							<f:selectItem itemValue="trainer" itemLabel="Trainer" />
+							<f:selectItem itemValue="trainee" itemLabel="Trainee" />
+						</h:selectOneMenu></td>
+				</tr>
+
+
+
+
+				<tr>
+					<td>Username</td>
+					<td><h:inputText id="username"></h:inputText></td>
+				</tr>
+
+
+
+				<tr>
+					<td>Password</td>
+					<td><h:inputSecret id="password"></h:inputSecret></td>
+				</tr>
+
+
+				<tr>
+					<td colspan="2" align="center"><h:commandButton id="register"
+							value="Register"></h:commandButton></td>
+				</tr>
+
+
+
+			</table>
+			</center>
+		</h:form>
+	</div>
+</h:body>
+</html>
